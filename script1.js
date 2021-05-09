@@ -13,12 +13,12 @@ const myConst = 'constant';
 
 // console+alert debugging
 console.log(myVar);
-alert(myLet);
+// alert(myLet);
 
 // Arrays
 let arr = [1, 'a', true];
 
-for (idx of arr) {
+for (let idx of arr) {
     console.log(arr[idx]);
 }
 
@@ -32,7 +32,7 @@ let obj = {
 };
 
 // For In
-for (key in obj) {
+for (let key in obj) {
     console.log(obj[key]);
 }
 
@@ -43,7 +43,7 @@ objEmpty.name = 'Paul';
 objEmpty.age = 45;
 objEmpty.weight = 80;
 
-for (key in objEmpty) {
+for (let key in objEmpty) {
     // Objects as associative arrays
     console.log(objEmpty[key]);
 }
@@ -143,3 +143,11 @@ CalculatorModule.subtract(4, 2); // 2
 CalculatorModule.divide(8, 2); // 4
 
 // Event listener for HTML element using closure
+let button = document.getElementById('myButton');
+
+button.addEventListener('click', () => {
+    let someP = document.createElement('p');
+    someP.textContent = 'Button pressed';
+
+    document.body.appendChild(someP);
+});
