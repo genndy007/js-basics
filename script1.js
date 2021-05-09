@@ -18,8 +18,8 @@ console.log(myVar);
 // Arrays
 let arr = [1, 'a', true];
 
-for (let idx of arr) {
-    console.log(arr[idx]);
+for (let unit of arr) {
+    console.log(unit);
 }
 
 console.log(arr.length);
